@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    background-color: #FFEAD4;
+    overflow-x: hidden;
+}
+
+.container-header {
+    width: 100vw;
+}
+
+.lett-header {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    width: 80%;
+    margin-top: 7%;
+    fill: transparent;
+    animation: lettering-preenchimento 0.5s ease-in-out forwards 4s;
+}
+
+/* aplica um traçado vermelho para todo o SVG */
+.lett-header path {
+    stroke-width: 2px;
+    stroke: #BE253F;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: lettering-stroke 5s ease-in-out forwards 2s;
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    color: #BE253F;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    color: #484848;
+}
+
+.container-cards {
+    display: flex;
+    width: 80%;
+    margin:auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    padding: 20px;
+    margin: 20px;
+}
+
+.container-footer {
+    position: relative;
+}
+
+
+.lett-footer {
+    width: 60%;
+    fill: white;
+    opacity: 0.7;
+    position: absolute;
+    left: 20%;
+    top: 45%;
+
+}
+
+.footer-infos {
+    text-align: center;
+}
+
+@keyframes lettering-preenchimento {
+    100% {
+        fill: #BE253F;
+    }
+}
+
+@keyframes lettering-stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
